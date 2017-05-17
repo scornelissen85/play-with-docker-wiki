@@ -1,0 +1,1 @@
+Here are the steps required to deploy PWD in your own infrastructure
