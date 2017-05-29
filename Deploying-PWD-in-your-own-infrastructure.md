@@ -82,7 +82,7 @@ docker run -d \
         -p 53:53/tcp \
         -v /var/run/docker.sock:/var/run/docker.sock -v sessions:/app/pwd/ \
         --restart always \
-        franela/play-with-docker:latest --cname host1 --save ./pwd/sessions
+        franela/play-with-docker:latest ./play-with-docker --name pwd --cname host1 --save ./pwd/sessions
 ```
 
 Here's a list of the different options you can specify:
