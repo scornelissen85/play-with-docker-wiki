@@ -105,6 +105,14 @@ Here's a list of the different options you can specify:
 **-save** - `Session storage file`  
 **DIND_IMAGE** - `Default dind image to use when creating an instance`  
 
+10. Applying iptables routing (optional)
+
+If you want to add multiple port redirection, apply the following iptables rules
+
+```
+sudo iptables -t nat -A PREROUTING -p tcp -m multiport --dports 1024:2375,2378:7945,7947:65535 -j REDIRECT --to-ports 80
+sudo iptables -t nat -A PREROUTING -p tcp -m multiport --dports 2376 -j REDIRECT --to-ports 443
+```
 
 # Cleaning up everything PWD creates
 
