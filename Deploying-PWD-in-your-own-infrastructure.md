@@ -107,14 +107,14 @@ For all flags use the help page of pwd. You can see the help page with this comm
 docker-compose run pwd bash -xc 'cd /go/src/github.com/play-with-docker/play-with-docker; go run api.go -help'
 ```
 
-11. Pull dind images
+12. Pull dind images
 
 Pull the default PWD `dind` images or your own if needed.
 ```bash
 docker pull franela/dind
 ```
 
-12. Start the PWD containers with Docker compose
+13. Start the PWD containers with Docker compose
 
 This step will lift op three containers.
 - HaProxy - This will route the traffic to the richt container
@@ -128,7 +128,7 @@ docker-compose up -d
 
 You can check with `docker-compose logs` if there are no issues when starting.
 
-13. Use your environment
+14. Use your environment
 
 Browse with your favorite browser to your domain. You will see the start page of PWD and a Start-button. When you click on it it will start a new session. If not (HTTP 500) then you may have missed `docker swarm init` command. You can run it and then a new session should be up and running. Then you can create a new instance. It this fails you maybe didn't pull the DIND image. Also these errors will appear in the logging (visible by `docker-compose logs -f`).
 
